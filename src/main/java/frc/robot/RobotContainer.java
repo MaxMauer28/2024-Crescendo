@@ -7,13 +7,13 @@ package frc.robot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
-//import frc.robot.Constants.LauncherConstants;
+import frc.robot.Constants.LauncherConstants;
 import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.Autos;
-//import frc.robot.commands.LaunchNote;
+import frc.robot.commands.LaunchNote;
 import frc.robot.commands.PrepareLaunch;
 import frc.robot.subsystems.DriveTrain;
-//import frc.robot.subsystems.Launcher;
+import frc.robot.subsystems.Launcher;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -24,7 +24,7 @@ import frc.robot.subsystems.DriveTrain;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final DriveTrain m_drivetrain = new DriveTrain();
-  //private final Launcher m_launcher = new Launcher();
+  private final Launcher m_launcher = new Launcher();
 
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
@@ -52,14 +52,15 @@ public class RobotContainer {
 
  
  
-   /**  m_operatorController
+     m_operatorController
       .a()
       .whileTrue(
           new PrepareLaunch(m_launcher)
               .withTimeout(LauncherConstants.kLauncherDelay)
               .andThen(new LaunchNote(m_launcher))
               .handleInterrupt(() -> m_launcher.stop()));
-      */       
+             
+              m_operatorController.leftBumper().whileTrue(m_launcher.getIntakeCommand());
     
 
   }

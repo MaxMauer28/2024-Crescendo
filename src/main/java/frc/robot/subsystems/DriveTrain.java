@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class DriveTrain {
+public class DriveTrain extends SubsystemBase {
     DifferentialDrive m_drivetrain;
 
   public DriveTrain(){

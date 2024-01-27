@@ -32,7 +32,7 @@ public final class Constants {
     }
   
 
-   /*  public static class LauncherConstants {
+     public static class LauncherConstants {
       // PWM ports/CAN IDs for motor controllers
       public static final int kFeederID = 5;
       public static final int kLauncherID = 6;
@@ -49,7 +49,7 @@ public final class Constants {
       public static final double kIntakeFeederSpeed = -.2;
   
       public static final double kLauncherDelay = 1;
-    }*/
+    }
 
 
 
